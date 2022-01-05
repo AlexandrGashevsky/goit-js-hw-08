@@ -30,4 +30,4 @@ var i=require("./isObject"),t=require("./now"),r=require("./toNumber"),n="Expect
 },{"./isObject":"u9vI","./now":"pJf5","./toNumber":"iS0Z"}],"TTyb":[function(require,module,exports) {
 "use strict";var e=t(require("lodash/debounce"));function t(e){return e&&e.__esModule?e:{default:e}}const a={},r=document.querySelector(".feedback-form"),l=document.querySelector(".feedback-form input"),o=document.querySelector(".feedback-form textarea");let u;r.addEventListener("submit",e=>{e.preventDefault();const t={email:l.value,message:o.value};console.log(t),e.currentTarget.reset(),localStorage.removeItem("feedback-form-state")}),r.addEventListener("input",(0,e.default)(e=>{a[e.target.name]=e.target.value,localStorage.setItem("feedback-form-state",JSON.stringify(a))},500)),null!==localStorage.getItem("feedback-form-state")&&(null!=(u=JSON.parse(localStorage.getItem("feedback-form-state"))).email&&(l.value=u.email),null!=u.message&&(o.value=u.message));
 },{"lodash/debounce":"CXfR"}]},{},["TTyb"], null)
-//# sourceMappingURL=/goit-js-hw-08/03-feedback.e8b3a85d.js.map
+//# sourceMappingURL=/goit-js-hw-08/03-feedback.adba011f.js.map
