@@ -19,15 +19,19 @@ form.addEventListener('submit', (event) => {
 form.addEventListener('input', debounce((event) => {
     data[event.target.name] = event.target.value;
     localStorage.setItem("feedback-form-state", JSON.stringify(data));
-    console.log(data);
 }, 500));
 
 let outputData;
 if (localStorage.getItem('feedback-form-state') !== null)
 {
     outputData = JSON.parse(localStorage.getItem("feedback-form-state"));
-    mail.value = outputData.email;
-    text.value = outputData.message;
+    if (outputData.email != undefined){
+      mail.value = outputData.email;
+    }
+    if (outputData.message != undefined)
+    {
+      text.value = outputData.message;
+    }
 }
 
 
