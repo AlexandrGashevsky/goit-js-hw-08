@@ -16,6 +16,7 @@ form.addEventListener('submit', (event) => {
  localStorage.removeItem("feedback-form-state");
 }); 
 
+
 form.addEventListener('input', debounce((event) => {
     data[event.target.name] = event.target.value;
     localStorage.setItem("feedback-form-state", JSON.stringify(data));
